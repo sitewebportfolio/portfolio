@@ -24,11 +24,11 @@ def make_rounded_image(img_path, size=(150, 150)):
     return rounded
 col1, col2, col3 = st.columns([3, 4, 1])
 with col2:
-    rounded_img = make_rounded_image("photoprofil3.png", size=(250, 250))
+    rounded_img = make_rounded_image("photoprofil3.png", size=(250, 300))
     st.image(rounded_img, use_container_width=False)
 st.markdown("<p style='text-align: center; font-size: 20px; '>Data Analyst | Data Scientist</p>", unsafe_allow_html=True)
 st.markdown(
-    "<div style='text-align: center; font-size: 18px;'>📧 <a href='mailto:hakima.er@outlook.fr' style='text-decoration: none; color: inherit;'>hakima.er@outlook.fr</a></div>",
+    "<div style='text-align: center; font-size: 18px;'>📧 <a href='mailto:elrhoddanih@gmail.com' style='text-decoration: none; color: inherit;'>elrhoddanih@gmail.com</a></div>",
     unsafe_allow_html=True
 )
 st.markdown("---")
@@ -141,20 +141,23 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # Colonnes pour afficher les projets
-col1, col2, col3 = st.columns([1.28, 1.32, 1.4])
+col1, col2, col3 = st.columns([1, 1, 1])
 
 with col1:
-    if st.button('𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃 𝐀𝐍𝐀𝐋𝐘𝐓𝐈𝐐𝐔𝐄 𝐀𝐕𝐄𝐂 𝐏𝐎𝐖𝐄𝐑 𝐁𝐈 📈📊'):
+    if st.button('𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃 𝐀𝐍𝐀𝐋𝐘𝐓𝐈𝐐𝐔𝐄 𝐀𝐕𝐄𝐂 𝐏𝐎𝐖𝐄𝐑 𝐁𝐈 - 𝐀𝐍𝐀𝐋𝐘𝐒𝐄 𝐃𝐄𝐒 𝐕𝐄𝐍𝐓𝐄𝐒 📈📊'):
         st.session_state.project = 'project_1'
 
 with col2:
-    if st.button("𝐏𝐑𝐄́𝐃𝐈𝐂𝐓𝐈𝐎𝐍 𝐃𝐔 𝐃𝐈𝐀𝐁𝐄̀𝐓𝐄 𝐂𝐇𝐄𝐙 𝐋𝐄𝐒 𝐏𝐀𝐓𝐈𝐄𝐍𝐓𝐒🩺💉"):
+    if st.button(" 𝐏𝐑𝐄́𝐃𝐈𝐂𝐓𝐈𝐎𝐍 𝐃𝐔 𝐃𝐈𝐀𝐁𝐄̀𝐓𝐄 𝐂𝐇𝐄𝐙 𝐋𝐄𝐒 𝐏𝐀𝐓𝐈𝐄𝐍𝐓𝐒 🩺💉"):
         st.session_state.project = 'project_2'
 
 with col3:
     if st.button('𝐏𝐑𝐄́𝐃𝐈𝐂𝐓𝐈𝐎𝐍 𝐃𝐔 𝐂𝐇𝐔𝐑𝐍 𝐂𝐋𝐈𝐄𝐍𝐓 𝐄𝐍 𝐄𝐍𝐓𝐑𝐄𝐏𝐑𝐈𝐒𝐄  ❌🏃❌ '):
         st.session_state.project = 'project_3'
-
+col4, col5, col6 = st.columns([1, 1, 1])
+with col5:
+    if st.button('𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃 𝐀𝐍𝐀𝐋𝐘𝐓𝐈𝐐𝐔𝐄 𝐀𝐕𝐄𝐂 𝐏𝐎𝐖𝐄𝐑 𝐁𝐈 - 𝐑𝐇 💼💼 '):
+        st.session_state.project = 'project_4'
 # Section de contenu des projets selon celui sélectionné
 if 'project' in st.session_state:
     project = st.session_state.project
@@ -461,6 +464,59 @@ Il se compose de deux tableaux de bord interactifs, enrichis par de nombreux fil
                 st.rerun()
             
 
+### Projet 4
 
+if 'project' in st.session_state:
+    project = st.session_state.project
+    if project == 'project_4':
+
+        st.markdown("<h2 style='text-decoration: underline;'>📈 Tableau de bord analytique RH</h2>", unsafe_allow_html=True)
+        st.subheader("**📚 Source des données :**")
+        st.markdown("Les données utilisées dans ce projet proviennent du site [RH Data](https://docs.google.com/spreadsheets/d/16lKzR1hN_4xGcM2PTpunjqdUtsOLK3bn/edit?gid=951390437#gid=951390437).  \nElles contiennent des informations simulées sur les ressources humaines d’une entreprise, réparties sur plusieurs années, postes, départements, niveaux d’études et profils d’employés.")
+        
+        st.subheader("**📝 Description du projet :**")
+       
+
+        st.markdown("""
+
+Ce projet consiste en la création d’un **dashboard analytique interactif** en ressources humaines, développé avec **Power BI**, à destination des responsables RH et décideurs d’entreprise.
+
+L’objectif principal est de fournir une **vision globale et détaillée** de la gestion des talents, en analysant des indicateurs clés tels que le niveau de satisfaction au travail, la performance, la rémunération, ou encore la répartition du personnel par département, poste, genre, âge ou niveau d’études.
+
+Grâce à des **visualisations dynamiques** et des **filtres interactifs** (par genre, statut marital, etc.), le tableau de bord permet :
+
+                    
+- de suivre l’évolution des effectifs et de leur profil
+
+- d’identifier les écarts de rémunération ou de satisfaction entre groupes
+
+- de piloter les stratégies RH de manière plus ciblée et proactive
+
+Cet outil facilite ainsi la prise de décision en matière de recrutement, formation, rétention des talents et amélioration des conditions de travail, tout en offrant une lecture rapide et intuitive des données RH essentielles à la performance de l’entreprise.
+
+""")
+
+        
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # Image 1 : Tableau de bord
+        
+        image1 = Image.open("RH_capture_decran.png")
+        col1, col2, col3 = st.columns([1, 14, 1])
+        with col2:
+            st.markdown("### 📊 Tableau de bord analytique RH interactif avec Power BI")
+            st.image(image1, caption="Aperçu global des indicateurs RH clés : effectifs, satisfaction, performance", use_container_width=True)
+
+            st.markdown("---")
+
+# Créer des colonnes pour centrer le bouton
+        col1, col2, col3 = st.columns([0.8, 1, 0.8])
+
+# Ajouter la classe CSS à la colonne centrale
+        with col2:
+            if st.button("🔙🔙 𝐑𝐄𝐓𝐎𝐔𝐑 𝐀̀ 𝐋𝐀 𝐒𝐄́𝐋𝐄𝐂𝐓𝐈𝐎𝐍 𝐃𝐄𝐒 𝐏𝐑𝐎𝐉𝐄𝐓𝐒 🔙🔙"):
+                st.session_state.project = None
+                st.rerun()
         
 
