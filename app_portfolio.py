@@ -24,7 +24,7 @@ def make_rounded_image(img_path, size=(150, 150)):
     return rounded
 col1, col2, col3 = st.columns([3, 4, 1])
 with col2:
-    rounded_img = make_rounded_image("photoprofil.jpg", size=(280, 280))
+    rounded_img = make_rounded_image("photoprofil3.png", size=(250, 250))
     st.image(rounded_img, use_container_width=False)
 st.markdown("<p style='text-align: center; font-size: 20px; '>Data Analyst | Data Scientist</p>", unsafe_allow_html=True)
 st.markdown(
